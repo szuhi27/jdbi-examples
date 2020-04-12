@@ -6,7 +6,6 @@ import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
 import org.jdbi.v3.sqlobject.statement.*;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,13 +27,6 @@ public interface UserDao {
     )
 
     void createTable();
-/*
-    @SqlUpdate("INSERT INTO user (username, password, name, email, gender, dob, enabled) " +
-            "VALUES (:username, :password, :name, :email, :gender, :dob, :enabled)")
-    @GetGeneratedKeys
-    Long insert(@Bind("username") String username, @Bind("password") String password, @Bind("name") String name,
-                @Bind("email") String email, @Bind("gender") User.Gender gender,
-                @Bind("dob") LocalDate dob, @Bind("enabled") boolean enabled);*/
 
     @SqlUpdate("INSERT INTO user (username, password, name, email, gender, dob, enabled) " +
             "VALUES (:username, :password, :name, :email, :gender, :dob, :enabled)")

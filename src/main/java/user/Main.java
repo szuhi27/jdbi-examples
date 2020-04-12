@@ -17,7 +17,6 @@ public class Main {
         try (Handle handle = jdbi.open()) {
             UserDao dao = handle.attach(UserDao.class);
             dao.createTable();
-            /*dao.insert(new User("alma", "kutyus", "Kis Béla", "alma@gmail.com", User.Gender.MALE, LocalDate.of(2015,2,5), false));;*/
             User userA = User.builder()
                     .name("James Bond").username("007").password("spy").email("jb007@gmail.com").gender(MALE)
                     .dob(LocalDate.of(1920,11,11)).enabled(true).build();
