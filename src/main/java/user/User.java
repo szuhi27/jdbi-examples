@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 
-//@AllArgsConstructor
-//@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Data
 public class User {
@@ -27,10 +27,10 @@ public class User {
     private Gender gender;
     private LocalDate dob;
     private boolean enabled;
-
+/*
     public User(){}
 
-    public User(Long id, String username, String password, String name, String email, Gender gender, LocalDate dob, boolean enable){
+    public User(Long id, String username, String password, String name, String email, Gender gender, LocalDate dob, boolean enabled){
         this.id = id;
         this.username =username;
         this.password = password;
@@ -38,7 +38,7 @@ public class User {
         this.email = email;
         this.gender = gender;
         this.dob = dob;
-        this.enabled = enable;
+        this.enabled = enabled;
     }
 
     public User(String username, String password, String name, String email, Gender gender, LocalDate dob, boolean enabled){
@@ -65,20 +65,20 @@ public class User {
     public LocalDate getDob(){return dob;}
     public void setDob(LocalDate dob){this.dob = dob;}
 
-    public boolean getEnable(){return enabled;}
+    public boolean getEnabled(){return enabled;}
     public void setEnabled(boolean enabled){this.enabled = enabled;}
-
+*/
     @Override
     public String toString(){
         return "User{" +
-                "id:" +id+
-                "username:" +username+
-                "password:" +password+
-                "name:" +name+
-                "email:" +email+
-                "gender:" +gender+
-                "date of birth:" +dob+
-                "enabled:" +enabled+
+                "id: " +id+
+                ", username:" +username+
+                ", password:" +password+
+                ", name:" +name+
+                ", email:" +email+
+                ", gender:" +gender+
+                ", date of birth:" +dob+
+                ", enabled:" +enabled+
                 '}';
     }
 
